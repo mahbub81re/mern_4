@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A sample page using all HTML tags and attributes">
+    <meta name="author" content="Your Name">
+    <title>All HTML Tags</title>
+    <link rel="icon" type="image/x-icon" href="../images/barry-leaf.ico"/>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table, th, td { border: 1px solid black; border-collapse: collapse; padding: 5px; }
+    </style>
+    
+</head>
+<body>
+    <!-- This is the header details-->
+    <header>
+        <h1 >Welcome to My HTML Page</h1>
+        <!-- This is  a navigation bar -->
+        <nav>
+            <ul>
+                <!-- List of navigation -->
+                <li><a href="#section1" title="Go to Section 1">Section 1</a></li>
+                <li><a href="#section2" title="Go to Section 2">Section 2</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- This is the main section  -->
+    <main> 
+
+        <section id="section1" class="content-section">
+            <h2 style="color:blue;">Section 1</h2>
+            <p lang="en">This is a paragraph with <strong>bold</strong>, <em>italic</em>, and <u>underlined</u> text.</p>
+            <abbr title="Hypertext Markup Language">HTML</abbr>
+            <address translate="no">Contact us at: <a href="mailto:example@example.com">example@example.com</a></address>
+            <blockquote cite="https://example.com">"This is a blockquote example."</blockquote>
+            <!-- <pre> tag confirm the text will show with line brack if there there has any line brack in the <pre> tag -->
+            <pre>
+                This is preformatted text.
+                It maintains spacing and line breaks.
+            </pre>
+            <code data-language="javascript">console.log("Hello, World!");</code>
+            <bdo dir="rtl">This text is right-to-left.</bdo>
+            <!-- this a section thats has some hidden information , if you click the summery text you will show that. -->
+            <details open>
+                <summary>Click to see more details</summary>
+                This is additional hidden content.
+            </details>
+        </section>
+        
+        <section id="section2" class="content-section">
+            <h2 data-section="two">Section 2</h2>
+            <figure>
+                <img src="https://static.youthop.com/uploads/sites/2/2022/01/interactive-care-1038x584.jpg" alt="Placeholder Image" width="150" height="150" loading="lazy">
+                <figcaption>This is an image caption.</figcaption>
+            </figure>
+            <!-- this is some  information showing with a table  -->
+            <table>
+                <caption>Sample Table</caption>
+                <colgroup>
+                    <col style="background-color:lightgray" span="1">
+                    <col span="1">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">Header 1</th>
+                        <th scope="col">Header 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td headers="col1">Data 1</td>
+                        <td headers="col2">Data 2</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Table Footer</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+    
+    <aside>
+        <p hidden>This is an aside element.</p>
+    </aside>
+    <!-- this is  a form to contact the owner  -->
+    <form action="/submit" method="post" autocomplete="on">
+        <fieldset disabled>
+            <legend>Contact Form</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required autofocus placeholder="Enter your name"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required readonly value="example@example.com"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" maxlength="500"></textarea><br>
+            <button type="submit" formaction="/custom-submit">Submit</button>
+        </fieldset>
+    </form>
+    <!-- this is the footer details -->
+    <footer>
+        <p>&copy; <time datetime="2025">2025</time> My Website</p>
+    </footer>
+</body>
+</html>
