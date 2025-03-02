@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 20px 60px;
+            margin-top: 20px;
+        }
+        header div{
+            display: flex;
+            justify-content: space-between;
+        }
+        header img {
+            width: 120px;
+            height: 80px;
+        }
+        nav {
+            display: flex;
+            padding: 5px 60px;
+            background-color: aliceblue;
+            margin-top: 10px;
+        }
+        nav a, nav select {
+            margin-right: 15px;
+            text-decoration: none;
+            color: black;
+        }
+        main {
+            padding: 10px 60px;
+        }
+        .form-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .form-section section {
+            width: 48%;
+        }
+        .form-section div {
+            display: block;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        label {
+            display: block;
+            padding-bottom: 5px;
+        }
+        select{
+            width: 100%;
+            padding: 5px;
+        }
+       input {
+            width: 98%;
+            padding: 5px;
+        }
+        fieldset {
+            padding: 10px;
+            margin-top: 10px;
+        }
+        legend {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./logo.png" alt="Logo" />
+            <img src="./logo for teaching.png" alt="Teaching Logo" />
+            <img src="./logo.png" alt="Logo" />
+        </div>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/#course-module-2020">Course Module 2020</a>
+        <a href="/#">Class Schedule</a>
+        <a href="/#">Success History</a>
+        <select style="width:100px; background:none ; border:none;">
+            <option>Select 1</option>
+            <option>Select 2</option>
+            <option>Select 3</option>
+        </select>
+        <a href="#">FAQ</a>
+        <a href="#">Login</a>
+    </nav>
+
+    <main>
+        <div style="padding: 10px; background-color: #f0ffff;">
+            <strong>Students Registration Form</strong>
+        </div>
+        <p style="margin: 0; padding: 6px;">Please enter relevant information</p>
+        <hr />
+        <p style="margin: 0; padding-left: 6px; color: red;">Mandatory Fields*</p>
+
+        <div class="form-section">
+            <section>
+                <div>
+                    <label for="district">District*</label>
+                    <select name="district"id="district">
+                        <option  disabled selected>--select one---</option>
+                        <option>Mahbub</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="course">Course*</label>
+                    <select name="course" id="course">
+                        <option disabled selected>--select one---</option>
+                        <option>Course 1</option>
+                        <option>Course 2</option>
+                        <option>Course 3</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="student-name">Student Name*</label>
+                    <input name="student-name"  id="student-name" type="text" />
+                </div>
+
+                <div>
+                    <label for="father-name">Father Name*</label>
+                    <input name="father-name" id="father-name" type="text" />
+                </div>
+
+                <div>
+                    <label for="mother-name">Mother Name*</label>
+                    <input name="mother-name"  id="mother-name" type="text" />
+                </div>
+
+                <fieldset>
+                    <legend>Date of Birth*</legend>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <label for="day">Day</label>
+                            <select name="day" id="day">
+                                <option disabled selected>--select one---</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="month">Month</label>
+                            <select name="month" id="month">
+                                <option disabled selected>--select one---</option>
+                                <option>January</option>
+                                <option>February</option>
+                                <option>March</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="year">Year</label>
+                            <select name="year" id="year">
+                                <option disabled selected>--select one---</option>
+                                <option>2001</option>
+                                <option>2002</option>
+                                <option>2003</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <div>
+                      <span>Gender: </span>
+                      <input style="display: inline; width:auto;" type="radio"  name="gender" id="male" value="male">
+                      <label style="display: inline; width:auto;" for="male">Male</label>
+                      <input style="display: inline; width:auto;" type="radio"  name="gender" id="female" value="female">
+                      <label style="display: inline; width:auto;" for="female">Female</label>
+                </div>
+
+                <div>
+
+                    <span>Physical Handicapped*: </span>
+                    <input style="display: inline; width:auto;" type="radio"  name="phy" id="phy_true" value="true">
+                    <label style="display: inline; width:auto;" for="phy_true">Yes</label>
+                    <input style="display: inline; width:auto;" type="radio"  name="phy"  id="phy_false" value="false">
+                    <label style="display: inline; width:auto;" for="phy_false">No</label>
+                   
+                </div>
+
+                
+
+                <div>
+                    <label for="email">Email*</label>
+                    <input name="email"id="email" type="email"  />
+                    <p style="margin: 0%;color:dimgray; padding-left:3px;">
+                        e.g: example@mail.com 
+                    </p>
+                </div>
+                
+                <div>
+                    <label for="phone">Phone (Must be 11 Digits)*</label>
+                    <input name="phone"id="phone" type="tel" pattern="[0-9]{11}" />
+                    <p style="margin: 0%;color:dimgray; padding-left:3px;">
+                        e.g:+801234566 
+                    </p>
+                </div>
+
+            </section>
+
+            <section>
+                
+
+
+
+                <div>
+                    <label for="identification-type">Identification Type*</label>
+                    <select name="identification-type"id="identification-type">
+                        <option disabled selected>--Select One--</option>
+                        <option>NID</option>
+                        <option>Birth Certificate</option>
+                    </select>
+                    <p style="margin: 0%;color:dimgray; padding-left:3px;">
+                        identification number must be 10 digit for new id and 17 digits for old .identification number must be 10 digit for new id and 17 digits for old
+                    </p>
+                </div>
+
+                <div>
+                    <label for="identification-no">Identification No.*</label>
+                    <input name="identification-no"  id="identification-no" type="text" placeholder="Enter your NID/Birth Certificate No." />
+                </div>
+
+                <div>
+                    <label for="home-district">Home District*</label>
+                    <select name="home-district" id="home-district">
+                        <option disabled selected>--Select One--</option>
+                        <option>District 1</option>
+                        <option>District 2</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="upazila">Upazila*</label>
+                    <select name="upazila" id="upazila">
+                        <option disabled selected>--Select One--</option>
+                        <option>Upazila 1</option>
+                        <option>Upazila 2</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="village">Village/House No./Road No./Other Alternative*</label>
+                    <input name="village" id="village" type="text" />
+                </div>
+
+                <div>
+                    <label for="post-office">Post Office*</label>
+                    <input name="post-office" id="post-office" type="text" />
+                </div>
+
+                <div>
+                    <label for="education-qualification">Educational Qualification* (Higher Level)</label>
+                    <select name="education-qualification" id="education-qualification">
+                        <option disabled selected>--Select One--</option>
+                        <option>SSC</option>
+                        <option>HSC</option>
+                        <option>Bachelor</option>
+                        <option>Master</option>
+                    </select>
+                </div>
+
+
+                <div>
+
+                    <span>Have any computer?* </span>
+                    <input style="display: inline; width:auto;" type="radio" id="c_false" name="c"  value="true">
+                    <label style="display: inline; width:auto;" for="c_false">Yes</label>
+                    <input style="display: inline; width:auto;" type="radio" id="c_true" name="c" value="false">
+                    <label style="display: inline; width:auto;" for="c_true">No</label>
+                   
+                </div>
+
+    
+
+                <div>
+                    <label for="photograph">Photograph*</label>
+                    <input name="photograph"id="photograph" type="file" />
+                    <p style="margin: 0%;color:dimgray; padding-left:3px;">
+                        Image size must be ...
+                    </p>
+                </div>
+
+                <div>
+                    <label for="signature">Signature*</label>
+                    <input name="signature" id="signature" type="file" />
+                    <p style="margin: 0%;color:dimgray; padding-left:3px;">
+                        Image size must be ...
+                    </p>
+                </div>
+
+                <div>
+                    
+                   <button style="padding: 6px; padding-left:10px; padding-right:20px;">Submit</button>
+                   
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
