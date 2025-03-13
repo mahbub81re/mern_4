@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        window.addEventListener("scroll", function () {
+            let header = document.querySelector(".header");
+            if (window.scrollY > 50) { // Change color after scrolling 50px
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+        
+    </script>
+</head>
+<body>
+    <!-- Header -->
+   <header class="header">
+      <div class="logo">
+          <img src="./images/logo_coffe.png" alt="Logo Coffe" class="logo_img">
+      </div>
+      <nav class="nav">
+         <ul class="links">
+            <li class="link"><a href="#about_us" class="active">About Ous</a></li>
+            <li class="link"><a href="#our_product">Our Product</a></li>
+            <li class="link"><a href="#delivery" >Delivery</a></li>
+         </ul>
+      </nav>
+      <div class="search">
+         
+            <div class="search_bar_can">
+                <form action="#">
+                    <div class="search_icon_con">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                          </svg>
+                    </div>
+                    <div class="search_input">
+                       <input type="text" name="search" placeholder="Cappuccino"/>
+                    </div>
+                </form>
+            </div>
+            <div class="bag_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                  </svg>
+                  <div class="bag_countrt">2</div>
+            </div>
+      </div>
+   </header>
+
+   <!-- Hero Section -->
+    <section class="hero">
+        <img src="./images/bg_img_hero.png" alt="texture" class="bg_top_texture">
+        <img src="./images/bg_img_hero.png" alt="texture" class="bg_bottom_texture">
+      <div class="hero_hero_con">
+        <div class="hero_texts_con">
+            <h1 class="hero_title">
+             Enjoy  your <span>coffee</span> before your activity
+            </h1>
+            <div class="hero_para">
+                Boost your productivity and build your mood with a glass of coffee in the morning 
+            </div>
+            <div class="hero_buttons">
+                <a href="#" style="background-color:#2f2105 ; color:white; border-radius:50px; ">Order Now</a>
+                <a href="#">More Menu</a>
+            </div>
+        </div>
+        <div class="hero_cup_image_con">
+            <img src="./images/img-hero.png" alt="Coffee Cup" class="hero_image">
+        </div>
+      </div>
+    </section>
+   <!-- Populer -->
+    <section class="populer">
+           <div class="populer_top">
+            <div class="pop_title">
+              Populer <span>Now</span>
+            </div>
+            <div class="image_group">
+               <div class="card">
+                <div class="card_image">
+                    <img src="./images/unsplash_SqYmTDQYMjo (1).png" alt="Card" >
+                    <div class="card_review">
+                        4.8 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFD057" class="bi bi-star-fill"  viewBox="0 0 16 16" style="padding-top: 5px ;">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                          </svg>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <div class="name_price">
+                        <div class="name">Vanilla</div>
+                        <div class="price">3k</div>
+                    </div>
+                    <div class="buttons">
+                        <div class="hotcold">
+                            <a href="#hot" class="hot_link" class="hot">Hot</a>
+                            <a href="#hot" class="hot_link"class="cold">Cold</a>
+                        </div>
+                        <div class="card_beg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                              </svg>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               <div class="card">
+                <div class="card_image">
+                    <img src="./images/unsplash_SqYmTDQYMjo (2).png" alt="Card" >
+                    <div class="card_review">
+                        4.8 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFD057" class="bi bi-star-fill"  viewBox="0 0 16 16" style="padding-top: 5px ;">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                          </svg>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <div class="name_price">
+                        <div class="name">Vanilla</div>
+                        <div class="price">3k</div>
+                    </div>
+                </div>
+               </div>
+               <div class="card">
+                <div class="card_image">
+                    <img src="./images/unsplash_SqYmTDQYMjo (3).png" alt="Card" >
+                    <div class="card_review">
+                        4.8 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFD057" class="bi bi-star-fill"  viewBox="0 0 16 16" style="padding-top: 5px ;">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                          </svg>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <div class="name_price">
+                        <div class="name">Vanilla</div>
+                        <div class="price">3k</div>
+                    </div>
+                </div>
+               </div>
+            </div>
+           </div>
+    <!-- Service -->
+    <section class="service">
+          <h1 class="service_title">How to use our <span>services</span></h1>
+          <div class="service_con">
+            <div class="service_one">
+                <div class="service_image_con">
+                    <img src="./images/coffee-cup 2.png" alt="Coffee Service" class="service_image">
+                </div>
+                <h1>
+                    Choose your coffee
+                </h1>
+                <p>
+                    There 20+ coffee for you
+                </p>
+            </div>
+            <div class="service_one">
+                <div class="service_image_con">
+                    <img src="./images/food-truck 1.png" alt="Coffee Service" class="service_image">
+                </div>
+                <h1>
+                    Choose your coffee
+                </h1>
+                <p>
+                    There 20+ coffee for you
+                </p>
+            </div>
+            <div class="service_one">
+                <div class="service_image_con">
+                    <img src="./images/coffee-cup 2.png" alt="Coffee Service" class="service_image">
+                </div>
+                <h1>
+                    Choose your coffee
+                </h1>
+                <p>
+                    There 20+ coffee for you
+                </p>
+            </div>
+          </div>
+    </section>
+    </section>
+
+     <!-- About Us -->
+      <section class="about_us">
+            <div class="about_us_con">
+                <div class="about_us_image">
+                    <img src="./images/unsplash_3n3mPoGko8g.png" alt="unsplash:3n3mPoGko8g">
+                </div>
+                <div class="about_us_texts">
+                    <h1 class="about_us_title">
+                        About <span>Us</span>
+                    </h1>
+                    <h1>
+                        We provide quality coffee, and ready to deliver.
+                    </h1>
+                    <p>We are a company that makes and distributes delicious drinks. our main product is made with a secret recipe and available in stores worldwide.</p>
+                    <a href="#">Get your coffee</a>
+                </div>
+            </div>
+      </section>
+    <!-- Special -->
+     <section class="special">
+       <div class="special_con">
+         <h1 class="special_title">
+            Special menu <span>for you</span>
+         </h1>
+         <div class="menu_cords">
+            <div class="card">
+                <div class="card_image">
+                    <img src="./images/unsplash_SqYmTDQYMjo (1).png" alt="Card" >
+                    <div class="card_review">
+                        4.8 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFD057" class="bi bi-star-fill"  viewBox="0 0 16 16" >
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                          </svg>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <div class="name_price">
+                        <div class="name">Vanilla</div>
+                        <div class="price">3k</div>
+                    </div>
+                    <div class="buttons">
+                        <div class="hotcold">
+                          <p>
+                            Coffe with ice cream vanilla
+                          </p>
+                        </div>
+                        <div class="card_beg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                              </svg>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               
+               <div class="card">
+                <div class="card_image">
+                    <img src="./images/unsplash_SqYmTDQYMjo (2).png" alt="Card" >
+                    <div class="card_review">
+                        4.8 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFD057" class="bi bi-star-fill"  viewBox="0 0 16 16" >
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                          </svg>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <div class="name_price">
+                        <div class="name">Vanilla</div>
+                        <div class="price">3k</div>
+                    </div>
+                    <div class="buttons">
+                        <div class="hotcold">
+                          <p>
+                            Coffe with ice cream vanilla
+                          </p>
+                        </div>
+                        <div class="card_beg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                              </svg>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               <div class="card">
+                <div class="card_image">
+                    <img src="./images/unsplash_QXzdFy92CGY.png" alt="Card" >
+                    <div class="card_review">
+                        4.8 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFD057" class="bi bi-star-fill"  viewBox="0 0 16 16" >
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                          </svg>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <div class="name_price">
+                        <div class="name">Vanilla</div>
+                        <div class="price">3k</div>
+                    </div>
+                    <div class="buttons">
+                        <div class="hotcold">
+                          <p>
+                            Coffe with ice cream vanilla
+                          </p>
+                        </div>
+                        <div class="card_beg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                              </svg>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               <div class="card">
+                <div class="card_image">
+                    <img src="./images/unsplash_RFHFV7lVQBY.png" alt="Card" >
+                    <div class="card_review">
+                        4.8 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFD057" class="bi bi-star-fill"  viewBox="0 0 16 16" >
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                          </svg>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <div class="name_price">
+                        <div class="name">Vanilla</div>
+                        <div class="price">3k</div>
+                    </div>
+                    <div class="buttons">
+                        <div class="hotcold">
+                          <p>
+                            Coffe with ice cream vanilla
+                          </p>
+                        </div>
+                        <div class="card_beg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                              </svg>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               <div class="card">
+                <div class="card_image">
+                    <img src="./images/unsplash_SqYmTDQYMjo (1).png" alt="Card" >
+                    <div class="card_review">
+                        4.8 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFD057" class="bi bi-star-fill"  viewBox="0 0 16 16" >
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                          </svg>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <div class="name_price">
+                        <div class="name">Vanilla</div>
+                        <div class="price">3k</div>
+                    </div>
+                    <div class="buttons">
+                        <div class="hotcold">
+                          <p>
+                            Coffe with ice cream vanilla
+                          </p>
+                        </div>
+                        <div class="card_beg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                              </svg>
+                        </div>
+                    </div>
+                </div>
+               </div>
+               <div class="card">
+                <div class="card_image">
+                    <img src="./images/unsplash_SqYmTDQYMjo (1).png" alt="Card" >
+                    <div class="card_review">
+                        4.8 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFD057" class="bi bi-star-fill"  viewBox="0 0 16 16" >
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                          </svg>
+                    </div>
+                </div>
+                <div class="card_body">
+                    <div class="name_price">
+                        <div class="name">Vanilla</div>
+                        <div class="price">3k</div>
+                    </div>
+                    <div class="buttons">
+                        <div class="hotcold">
+                          <p>
+                            Coffe with ice cream vanilla
+                          </p>
+                        </div>
+                        <div class="card_beg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                              </svg>
+                        </div>
+                    </div>
+                </div>
+               </div>
+         </div>
+       </div>
+     </section>
+     <!-- Review -->
+      <section class="review">
+         <div class="background">
+
+         </div>
+         <div class="review_con">
+            <div class="some_text">
+                <h1 class="review_title">What they say about us</h1>
+                <p class="review_description">
+                    We always provide the best service and always maintain the quality of coffee
+                </p>
+            </div>
+            <div class="review_card_con">
+                <div class="review_card">
+                    <img src="./images/unsplash_SJvDxw0azqw.png" alt="" class="review_image">
+                    <div class="review_text">
+                        <h1 class="client_name">Naura</h1>
+                        <p class="client_review">I really love the cappucino, the coffee was very smooth  </p>
+                    </div>
+                </div>
+                <div class="review_card">
+                    <img src="./images/unsplash_iEEBWgY_6lA.png" alt="" class="review_image">
+                    <div class="review_text">
+                        <h1 class="client_name">Naura</h1>
+                        <p class="client_review">I really love the cappucino, the coffee was very smooth  </p>
+                    </div>
+                </div>
+                <div class="review_card">
+                    <img src="./images/unsplash_b3AYk8HKCl0.png" alt="" class="review_image">
+                    <div class="review_text">
+                        <h1 class="client_name">Naura</h1>
+                        <p class="client_review">I really love the cappucino, the coffee was very smooth  </p>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+      </section>
+      <!-- Footer -->
+       <footer class="footer">
+           <div class="footer_card">
+             <div class="card_midlle">
+                <h1 class="footer_tex">Subscribe to get 50% discount price</h1>
+                <div class="email_input_box">
+                    <input type="text" class="emailinput">
+                    <button class="email_input_button">Order Now</button>
+                </div>
+             </div>
+           </div>
+       </footer>
+
+</body>
+</html>
