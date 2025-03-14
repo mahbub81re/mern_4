@@ -12,22 +12,77 @@
         document.addEventListener("DOMContentLoaded", function () {
             const navOpenIcon = document.querySelector(".nav_open_icon");
             const navCloseIcon = document.querySelector(".nav_close");
-            const navClosebody = document.querySelector(".nav_con");
             const nav = document.querySelector(".nav");
+            const addToCartButton = document.querySelector(".add_to_cart");
+            const cartBody = document.querySelector(".cart_body");
+            const cartCount = document.createElement("span");
+            const cartIcon = document.querySelector(".cart_icon img");
+            let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
         
-            // Open navigation menu
+            function updateCartDisplay() {
+                cartBody.innerHTML = "";
+                if (cart.length === 0) {
+                    cartBody.innerHTML = "<p>Cart is empty</p>";
+                } else {
+                    cart.forEach((item, index) => {
+                        const cartItem = document.createElement("div");
+                        cartItem.classList.add("cart_item");
+                        cartItem.innerHTML = `
+                            <div class="cart_item_image">
+                                <img src="${item.image}" alt="cart"/>
+                            </div>
+                            <div class="cart_item_details">
+                                <p class="item_name">${item.name}</p>
+                                <p class="item_price">$${item.price} x ${item.quantity} <b>$${item.price * item.quantity}</b></p>
+                            </div>
+                            <div class="delete_button">
+                                <button data-index="${index}"><img src="./images/icon-delete.svg" alt="delete"/></button>
+                            </div>
+                        `;
+                        cartBody.appendChild(cartItem);
+                    });
+                }
+                sessionStorage.setItem("cart", JSON.stringify(cart));
+            }
+        
+            addToCartButton.addEventListener("click", function () {
+                const productName = document.querySelector(".product_name").textContent;
+                const productPrice = parseFloat(document.querySelector(".price_discount").textContent.replace("$", ""));
+                const productImage = document.querySelector(".current_image_full_view").src;
+                const quantity = parseInt(document.querySelector(".edit_add_minus").value);
+        
+                let existingItem = cart.find(item => item.name === productName);
+                if (existingItem) {
+                    existingItem.quantity += quantity;
+                } else {
+                    cart.push({ name: productName, price: productPrice, quantity, image: productImage });
+                }
+                updateCartDisplay();
+            });
+        
+            cartBody.addEventListener("click", function (e) {
+                if (e.target.closest(".delete_button button")) {
+                    const index = e.target.closest(".delete_button button").getAttribute("data-index");
+                    cart.splice(index, 1);
+                    updateCartDisplay();
+                }
+            });
+        
+            updateCartDisplay();
+        
             navOpenIcon.addEventListener("click", function () {
                 nav.style.display = "block";
             });
         
-            // Close navigation menu
             navCloseIcon.addEventListener("click", function () {
                 nav.style.display = "none";
             });
+        
             nav.addEventListener("click", function () {
                 nav.style.display = "none";
             });
         });
+        
     </script>
 </head>
 <body>
@@ -85,5 +140,57 @@
 
         </div>
     </header>
+
+    <section class="product_details">
+     <div class="details_container">
+      <div class="images_shower">
+        <div class="main_image">
+          <img src="./images/image-product-1.jpg" alt="product 1" class="current_image_full_view">
+        </div>
+        <div class="tab_image">
+            <button class="image_changer_button">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="" class="one_image current_image">
+            </button>
+            <button class="image_changer_button">
+                <img src="./images/image-product-2-thumbnail.jpg" alt="" class="one_image">
+            </button>
+            <button class="image_changer_button">
+                <img src="./images/image-product-3-thumbnail.jpg" alt="" class="one_image">
+            </button>
+            <button class="image_changer_button">
+                <img src="./images/image-product-4-thumbnail.jpg" alt="" class="one_image">
+            </button>
+        </div>
+      </div>  
+      <div class="details_shower">
+        <div class="company_name"> SNEAKER COMPANY</div>
+        <h1 class="product_name">Fall Limite Sneakers </h1>
+        <p class="product_detaila">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+       
+       <div class="price_con">
+        <div class="price_discount">
+            $125.00<span>50%</span>
+        </div>
+        <div class="only_price">
+            $250.00
+        </div>
+    </div>
+
+        <div class="cart_action_pro">
+           <div class="action_com"> 
+                <button class="add">+</button>
+                <input type="text" class="edit_add_minus" value="1">
+                <button class="minus">-</button>
+          </div>
+
+            <button class="add_to_cart" >
+                Add to cart
+            </button>
+        </div>
+      </div> 
+    </div> 
+    </section>
 </body>
 </html>
+
+
