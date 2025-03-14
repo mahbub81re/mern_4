@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>
+        Chalange Taking
+    </title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navOpenIcon = document.querySelector(".nav_open_icon");
+            const navCloseIcon = document.querySelector(".nav_close");
+            const navClosebody = document.querySelector(".nav_con");
+            const nav = document.querySelector(".nav");
+        
+            // Open navigation menu
+            navOpenIcon.addEventListener("click", function () {
+                nav.style.display = "block";
+            });
+        
+            // Close navigation menu
+            navCloseIcon.addEventListener("click", function () {
+                nav.style.display = "none";
+            });
+            nav.addEventListener("click", function () {
+                nav.style.display = "none";
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="main_container">
+            <div class="logo">
+                <div class="nav_open_icon">
+                    <img src="./images/icon-menu.svg" alt="Nav  Icopn"/>
+                </div>
+                Sneakers
+            </div>
+            <nav class="nav">
+                <ul class="nav_con">
+                    <div class="nav_close">
+                        <img src="./images/icon-close.svg" alt="close" class="image">
+                    </div>
+                        <li class="nav_item"><a href="#">Collections</a></li>
+                        <li class="nav_item"><a href="#">Men</a> </li>
+                        <li class="nav_item"><a href="#">Women</a></li> 
+                        <li class="nav_item"><a href="#">About</a></li> 
+                        <li class="nav_item"><a href="#">Contact</a></li> 
+                </ul>
+            </nav>
+            <div class="cart_and_profile_icno">
+               <div class="cart_icon">
+                  <img src="./images/icon-cart.svg" alt="cart"/>
+                  <div class="cart_con">
+                    <div class="cart_head">
+                      <h1>Cart</h1>
+                    </div>
+                    <div class="cart_body">
+                        <div class="cart_item">
+                          <div class="cart_item_image">
+                            <img src="./images/image-product-1.jpg" alt="cart"/>
+                          </div>
+                          <div class="cart_item_details">
+                            <p class="item_name">Fall Limited Edition Sneakers</p>
+                            <p class="item_name">$125.00 x 3 $375.00</p>
+                          </div>
+                          <div class="delete_button">
+                             <button><img src="./images/icon-delete.svg" alt="delete"/></button>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="cart_action">
+                        <button>Chack Out</button>
+                    </div>
+                  </div>
+               </div>
+               <div class="profile_icon">
+                  <img src="./images/image-avatar.png" alt="avatar"/>
+               </div>
+            </div>
+
+
+        </div>
+    </header>
+</body>
+</html>
