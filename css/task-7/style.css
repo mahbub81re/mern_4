@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+/* header section */
+.header_section{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+.logo{
+  padding: 18px;
+
+}
+.logo_image{
+width: 120px;
+}
+.nav{
+   padding: 15px;
+   position: fixed;
+   width: 90% ;
+   background-color: white;
+   top:80px;
+   left:5%;
+   border-radius: 10px;
+   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+   display: none;
+}
+.nav_items{
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+}
+.nav_item{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.nav_link{
+  text-decoration: none;
+  color: hsl(234, 21%, 36%);
+  
+}
+
+.nav_link:hover{
+    color:black;
+
+}
+
+.nav_item:hover{
+   border-bottom: 2px solid hsl(136, 65%, 51%);
+}
+
+.request_invite_button{
+   padding: 10px;
+   position: relative;
+}
+
+
+.invite_link{
+    margin: 10px auto;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 12px;
+    text-decoration: none;
+    background: rgb(0,0,0);
+    display: none;
+    font-size: 14px;
+    background: linear-gradient(90deg, rgb(49, 208, 105) , rgb(41, 185, 215) 100%);
+}
+.invite_link:hover{
+    background: linear-gradient(90deg, rgba(49, 208, 105, 0.815) , rgb(41, 185, 215) 100%);
+
+}
+.nav_open_button{
+  padding: 3px;
+  display: inline-block;
+  background: none;
+  border: none;
+}
+.nav_open_button_image{
+  width: 28px;
+  height: 24px;
+  margin-top: 8px;
+  margin-right: 5px;
+}
+
+/* hero section */
+.hero{
+    width: 100%;
+    background-image:   url('./images/image-mockups.png'),url('./images/bg-intro-mobile.svg');
+    background-size: 350px,400px;
+    background-position:center -100px ,right -100px;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+}
+
+
+.hero_title{
+  margin-top: 350px;
+  text-align: center;
+  padding: 0 40px;
+  font-size: 34px;
+  font-weight: 300;
+}
+.hero_description{ 
+    text-align: justify ;
+    padding: 20px 38px;
+    color: hsl(233, 26%, 24%);
+    font-size: 14px;
+    line-height: 24px;
+}
+.request_invite_mobile{
+    display: flex;
+}
+.invite_link_mobile{
+    margin: 10px auto;
+    color: white;
+    border-radius: 50px;
+    padding: 12px 16px;
+    text-decoration: none;
+    background: rgb(0,0,0);
+    display: inline-block;
+    font-size: 14px;
+    background: linear-gradient(90deg, rgb(49, 208, 105) , rgb(41, 185, 215) 100%);
+}
+
+.invite_link_mobile:hover{
+    background: linear-gradient(90deg, rgba(49, 208, 105, 0.815) , rgba(41, 186, 215, 0.842) 100%);
+
+}
+
+/* Why choose section */
+.why_choose{
+  
+  width: 100%;
+}
+.why_chooge_title{
+    text-align: center;
+    padding: 0 40px;
+    font-size: 34px;
+    font-weight: 300;
+}
+.why_choose_para{
+    text-align: center ;
+    padding: 20px 38px;
+    color: hsl(233, 26%, 24%);
+    font-size: 14px;
+    line-height: 24px;
+}
+.why_choose_card_container{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: 0 auto;
+    width: 100%;   
+}
+
+
+.why_choose_card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.why_choose_card_img{
+   width: 100px;
+   margin:30px auto;
+
+}
+.why_choose_card_title{
+   text-align: center;
+   padding: 0 40px;
+   font-size: 34px;
+   font-weight: 300;
+}
+.why_choose_card_para{
+    text-align: center;
+    padding: 20px 38px;
+    color: hsl(233, 26%, 24%);
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+.letest_article{
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.letest_title{
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 34px;
+    font-weight: 300;
+}
+
+.article_card{
+   display: flex;
+   flex-direction: column;
+   padding: 16px;
+   margin-bottom: 40px;
+}
+.article_card_image{
+   width: 100%;
+   border-radius: 10px;
+}
+.article_card_body{
+   padding: 20px;
+}
+.article_top_title{
+    padding: 10px 20px;
+    color: hsl(233, 26%, 24%);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 200;
+}
+.article_card_title{
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 300;
+}
+.article_card_title:hover{
+    color: hsl(136, 65%, 51%);
+}
+.article_card_para {
+    padding: 10px 20px;
+    color: hsl(233, 26%, 24%);
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 200;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    text-align: justify;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 90px;
+
+}
+
+
+
+/* footer section */
+footer{
+    background-color: rgb(45,49,78);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_log{
+  color: white;
+}
+
+.footer_section{
+  display:flex ;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px auto;
+}
+.footer_left{
+    padding: 40px auto;
+}
+.footer_log{
+   width: 200px;
+   margin: 20px auto;
+   text-align: center;
+   
+}
+.social_icons{
+    width: 200px;
+    margin: 20px auto;
+   
+}
+.s_icon_items{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.s_icon_item img{
+   width: 30px;
+   height: 30px;
+}
+.social_icon_image{
+  
+}
+.s_icon_item img:hover{
+    color: hsl(136, 65%, 51%);
+
+}
+.footer_nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer_nav_items{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    list-style: none;
+}
+.footer_nav_item{
+  text-align: center;
+  padding: 10px;
+}
+.footer_item_link{
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+ 
+}
+.footer_item_link:hover{
+    color: hsl(136, 65%, 51%);
+
+}
+
+.request_invite_link{
+    text-align: center;
+    padding: 10px;
+  
+}
+.link_{
+    margin: 10px auto;
+    color: white;
+    border-radius: 50px;
+    padding: 14px 25px;
+    text-decoration: none;
+    background: rgb(0,0,0);
+    display: inline-block;
+    font-size: 18px;
+    background: linear-gradient(90deg, rgb(49, 208, 105) , rgb(41, 185, 215) 100%);
+}
+.link_:hover{
+    background: linear-gradient(90deg, rgba(49, 208, 105, 0.815) , rgba(41, 186, 215, 0.842) 100%);
+
+}
+.reserved{
+    text-align: center;
+    padding: 10px;
+    color: hsl(235, 27%, 83%);
+
+}
+
+
+@media screen and (min-width:375px) and (max-width:600px){
+
+} 
