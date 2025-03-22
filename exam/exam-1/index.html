@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const navOpenIcon = document.querySelector(".open_icon");
+          const image_button = document.querySelector(".open_icon");
+          const nav = document.querySelector(".nav");
+          navOpenIcon.addEventListener("click", function () {
+            const  open= nav.style.display ;
+            if(open=="block"){
+              nav.style.display = "none";
+              image_button.src = "./images/icon-hamburger.svg"; // Show hamburger icon
+        
+            }else{
+               nav.style.display = "block";
+               image_button.src = "./images/icon-close.svg"; // Show close icon
+              
+              
+            }
+            
+         
+        });
+  
+        });
+      </script>
+</head>
+<body>
+    <header class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="./images/icon-hamburger.svg" alt="hum" class="open_icon">
+                <img src="./images/Meubel House_Logos-05.png" alt="Logo" class="logo_img">
+                <h3 class="logo_text">Furniro</h3>
+
+            </div>
+            <nav class="nav">
+                <div class="nav_con">
+                    <ul class="nav_items">
+                       <a href="/" class="active">
+                         <li class="nav_item ">
+                            Home
+                         </li
+                        a>
+                       <a href="/"> 
+                          <li class="nav_item">
+                            Shop
+                          </li>
+                      </a>
+                       <a href="/"> 
+                          <li class="nav_item">
+                            About
+                          </li>
+                        </a>
+                        <a href="/">
+                            <li class="nav_item">
+                            Contact
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </nav>
+            <div class="header_right">
+                <ul class="header_icons">
+                    <li class="header_icon bottom_home_button">
+                     <a href="/" class="active">
+                        <img src="./images/icons8-home.svg" alt="" class="icon">
+                        <h3 class="icon_text">
+                            Home
+                        </h3>
+                     </a>
+                    </li>
+                    <li class="header_icon">
+                        <a href="/">
+                          <img src="./images/Vector.svg" alt="" class="icon">
+                          <h3 class="icon_text">
+                            Profile
+                          </h3>
+                        </a>
+                    </li>
+                    <li class="header_icon">
+                        <a href="/" >
+                          <img src="./images/Vector (1).svg" alt="" class="icon">
+                          <h3 class="icon_text">
+                            Search
+                          </h3>
+                         </a>
+                    </li>
+                    <li class="header_icon">
+                        <a href="/">
+                         <img src="./images/Vector (2).svg" alt="" class="icon">
+                         <h3 class="icon_text">
+                            Loved
+                         </h3>
+                         </a>
+                    </li>
+                  
+                </ul>
+                <div class="header_icon to_right">
+                    <a href="/">
+                     <img src="./images/Vector (3).svg" alt="" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+     <section class="heru">
+        <div class="heru_section">
+          <div class="mask_of_heru">
+            <h4>
+              New Arrival
+            </h4>
+            <h1>
+              Discover Our New Collection
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
+            </p>
+            <button>
+              BUY Now
+            </button>
+          </div>
+        </div>
+     </section>
+
+
+
+
+  <section class="browes_the_room">
+     <div class="browes_con">
+      <h1>Browse The Range</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+     <div class="browes_card_con">
+
+      <div class="browes_card">
+        <img src="./images/image 106.png" alt="card">
+        <div class="bottom_title">
+          Dining
+        </div>
+      </div>
+
+      <div class="browes_card">
+        <img src="./images/image 100.png" alt="card">
+        <div class="bottom_title">
+          Dining
+        </div>
+      </div>
+
+      <div class="browes_card">
+        <img src="./images/image 106.png" alt="card">
+        <div class="bottom_title">
+          Dining
+        </div>
+      </div>
+     </div>
+
+     </div> 
+    </section>
+
+
+
+
+</body>
+</html>
