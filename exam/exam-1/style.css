@@ -66,6 +66,7 @@ header{
     top:60px;
     left: 0;
     display: none;
+
 }
 
 .nav_con{
@@ -97,6 +98,7 @@ header{
    justify-content: space-between;
    background-color: rgba(238, 231, 231, 0.582);
    list-style: none;
+   z-index: 333;
 }
 
 .header_icon{
@@ -104,6 +106,7 @@ header{
     flex-direction: column;
     justify-items: center;
     width: 25%;
+    z-index: 333;
 
 }
 .header_icon a{
@@ -118,18 +121,31 @@ header{
 
    
 }
-.header_icon a img
-{
+.header_icon a img {
     width: 20px;
     height: 20px;
 }
 
-.header_icon a:hover ,.active {
-    border-bottom: 3px solid blue;
+/* SVG icon default styling */
+.icon {
+    width: 30px; /* Unified width */
+    margin-bottom: 10px;
+    fill: currentColor; /* Uses parent text color */
+    transition: fill 0.3s ease, color 0.3s ease;
 }
-.header_icon .icon{
-  width: 30px;
-  margin-bottom: 10px;
+
+/* Active & Hover Effects */
+.header_icon a:hover, 
+.active {
+    border-bottom: 3px solid blue;
+    color: blue;
+    background-color: white;
+}
+
+/* Changing SVG fill on hover & active */
+.header_icon a:hover .icon, 
+.active svg {
+    fill: rgb(68, 65, 199); 
 }
 
 
@@ -321,3 +337,260 @@ height: 100%;
 
 
 /*  Browes  The Room -------------------------------------------- */
+.browes_the_room{
+ width: 100%;
+ padding: 40px 0;
+}
+.browes_con{
+  margin:0px 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.browes_con h1{
+font-weight: 700;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 0px;
+text-align: center;
+
+}
+.browes_con p{
+font-weight: 400;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0px;
+color:#666666;
+text-align: center;
+margin: 10px 0;
+}
+
+.browes_card_con{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.browes_card{
+    width: 90%;
+}
+.browes_card img{
+    border-radius: 8px;
+    width: 100%;
+    margin:0 auto;
+}
+.browes_card  .bottom_title{
+    text-align: center;
+    padding: 20px;
+    font-weight: 500;
+}
+
+
+@media screen and (min-width:600px )  and (max-width:800px) {
+    .browes_card{
+        width: 90%;
+    }
+    .browes_card img{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:801px ) {
+    .browes_card_con{
+        flex-direction: row;
+    }
+    .browes_card{
+        margin: 0 10px;
+    }
+}
+
+@media screen and (min-width:1000px ) {
+    .browes_card_con{
+       width: 90%;
+    }
+}
+
+
+.products{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+ 
+}
+
+.proucts_container{
+    padding: 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   justify-items: center;
+}
+.proucts_container h1{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.products{
+    display: grid;
+    margin:0 auto;
+}
+
+.product{
+    width: 280px;
+    position: relative;
+    margin: 10px 0;
+    background-color: #ece8e861;
+    z-index: -1;
+}
+.product_image_con{
+    width: 100%;
+    position: relative;
+}
+.product_image_con img{
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.product_offer{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding:18px 10px;
+    background-color: #E97171;
+    color: white;
+    border-radius: 50px;
+}
+
+.product_new{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding:18px 10px;
+    background-color: #2EC1AC;
+    color: white;
+    border-radius: 50px;
+}
+
+.product_title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    padding: 5px 0;
+}
+
+.product_des{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+
+}
+.product_body{
+    padding: 10px;
+}
+.price_con{
+    display: flex;
+    padding: 5px 0;
+    justify-content: space-between;
+}
+
+.price_con .price{
+
+
+}
+
+.price_con .discount{
+    
+    color: #a19e9e;
+}
+
+.product_over_lay{
+    position: absolute;
+    z-index: 55;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a6;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.add_to_cart button{
+    padding:14px 40px ;
+    font-size: 16px;
+    color: #B88E2F;
+}
+
+.other_action {
+    display: flex; 
+    color: white;
+    margin: 10px auto;
+    font-size: 12px;
+    font-weight: bold;
+}
+.other_action .share{
+    padding: 3px ;
+}
+
+.other_action .share img{
+    width: 10px;
+}
+
+.product:hover .product_over_lay {
+    display: flex;
+}
+
+
+.see_more{
+    text-align: center;
+    padding: 30px;
+}
+
+.see_more a{
+    padding: 10px 50px;
+    border:3px solid #B88E2F;
+    color:#B88E2F;
+}
+
+@media screen and (min-width:600px )  and (max-width:800px) {
+   .products{
+    grid-template-columns:auto auto;
+   }
+   .product{
+    margin:10px;
+    width: 260px;
+   }
+}
+
+@media screen and (min-width:801px ) {
+    .products{
+        grid-template-columns:auto auto auto;
+       }
+       .product{
+        margin:10px;
+        width: 260px;
+       }
+}
+
+@media screen and (min-width:1200px ) {
+    .products{
+        grid-template-columns:auto auto auto auto;
+       }
+    .product{
+        margin:10px;
+        width: 260px;
+       }
+}
