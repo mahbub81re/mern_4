@@ -1667,7 +1667,8 @@ shop page
 }
 
 .cart_detailse{
-
+   width: 100%;
+   overflow-x: scroll;
 }
 
 .cart_detailse .head{
