@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Navigation</title>
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(58, 58, 58);
+        }
+
+        .nav_con {
+            background-color: tomato;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav ul li {
+            position: relative;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: tomato;
+            min-width: 150px;
+            padding: 10px 0;
+        }
+        .nav ul li ul li ul {
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 100%;
+            min-width: 150px;
+            padding: 10px 0;
+        }
+        .child2{
+            background-color: rgb(0, 0, 0);
+           color: white;
+        }
+        .nav ul li:hover > ul {
+            display: block;
+        }
+
+        .nav ul li ul li {
+            
+            display: block;
+            width: 100%;
+        }
+
+        .nav ul li ul li a {
+            padding: 10px;
+            display: block;
+            text-align: left;
+        }
+
+        .nav ul li ul li a:hover {
+            background-color: rgb(180, 30, 30);
+        }
+
+     
+    </style>
+</head>
+<body>
+    <div class="nav_con">
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">WordPress</a>
+                    <ul class="child1">
+                        <li><a href="#">Themes</a></li>
+                        <li><a href="#">Plugins</a></li>
+                        <li>
+                            <a href="#" class="child2">Tutorials</a>
+                            <ul >
+                                <li><a href="#">Stuff</a></li>
+                                <li><a href="#">Things</a></li>
+                                <li><a href="#">Other Stuff</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Graphics Design</a></li>
+                <li><a href="#">Inspiration</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
