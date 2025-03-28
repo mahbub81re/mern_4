@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Axis Example</title>
+    <style>
+        .main_axis {
+            display: flex;
+            padding: 30px;
+            flex-direction: row; 
+            justify-content: center; 
+            align-items: center; 
+            height: 200px;
+            border:2px solid black;
+        }
+
+        .cross_axis {
+            display: flex;
+            padding: 30px;
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            height: 200px;
+            border:2px solid black;
+
+        }
+
+
+        .item {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            background-color: tomato;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main_axis">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <div class="cross_axis">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+</body>
+</html>
