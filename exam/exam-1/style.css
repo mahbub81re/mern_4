@@ -847,27 +847,102 @@ margin: 10px 0;
         animation: mymove 3s;
         animation-iteration-count:1;
      }
+
+
      @keyframes mymove {
         from {margin:0 100%;}
         to {margin: 0%;}
       }
        .images_con .left .first{
         display: flex;
+        justify-content: right;
          align-items: flex-end;
        }
        .images_con .left .sec{
         display: flex;
+        justify-content: right;
          align-items: flex-start;
        }
 
-       /* .images_con  .lefte div{
+       .images_con  .right .first{
         display: flex;
+        justify-content:start;
+         align-items: flex-end;
+       }
+
+       .images_con  .right .sec{
+        display: flex;
+        justify-content: start;
          align-items: flex-start;
-       } */
+       }
+       .image_1{
+        width: 16%;
+       }
+       .image_2{
+        width: 70%;
+       }
+       .image_3{
+        width: 34%;
+       }
+       .image_4{
+        width: 52%;
+       }
+       .image_5{
+        width: 96%;
+       }
+       .image_6{
+        width: 48%;
+       }
+       .image_7{
+        width: 40%;
+       }
+       .image_8{
+        width: 36%;
+       }
+       .image_9{
+        width: 40%;
+       }
+     
+
+       @media screen and (min-width:600px )  and (max-width:700px) {
+        .images_con{
+            margin-top: 0px;
+
+        }
+       }
+    @media screen and (max-width:600px )  {
+        .image_1,.image_2,.image_3,.image_4,.image_5,.image_6,.image_7,.image_8,.image_9{
+            width: 100%;
+            height: 200px;
+           }
+           .images_con{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            flex-wrap:wrap;
+            margin-top: 0;
+            overflow: hidden;
+         }
+         .images_con  .first ,.images_con  .sec {width: 100%;overflow: hidden;}
+          .image_5{
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            height: 300px;
+            width: 300px;  
+        }
+        .left .sec{
+            flex-direction: row-reverse;
+        }
+     }
+     
+     @media screen and (max-width:400px )  {
+        .image_1,.image_2,.image_3,.image_4,.image_6,.image_7,.image_8,.image_9{
+            width: 100%;
+            height: 180px;
+           }
+     }
 
        .images_con  img{
         margin:3px;
-        width: auto;
        }
 
 
