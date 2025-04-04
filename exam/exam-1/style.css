@@ -936,6 +936,9 @@ margin: 10px 0;
         .left .sec{
             flex-direction: row-reverse;
         }
+        .gallary_con h2{
+            font-size: 24px;
+        }
      }
      
      @media screen and (max-width:400px )  {
