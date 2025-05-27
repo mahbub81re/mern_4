@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+
+.top_bar{
+    background-image:  url('./images/herobg.png'),url('./images/hero_bg_color.png');
+    background-repeat:repeat, no-repeat;
+    background-size: 150px 150px,cover;
+   
+}
+
+.container{
+    padding: 10px;
+}

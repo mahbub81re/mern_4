@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Quest</title>
+    <link rel="stylesheet" href="./style.css">
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+<section class="top_bar flex flex-col   h-auto bg-green-800 md:pt-8" >
+
+  <nav class="container bg-white h-14 p-2 md:flex md:justify-between   md:rounded-full mx-auto">
+    <div class="logo md:m-1">
+      <img src="./images/logo.svg" class="h-8" alt="">
+    </div>
+    <div class="nav hidden md:flex flex-row absolute md:relative bg-white  w-[95%] md:w-auto top-16 md:top-0 rounded p-2 md:p-0 text-center" id="menuBar">
+      <ul class="font-semibold text-[18px] font-manrope  md:flex md:p-2 ">
+        <li><a class="border-b min-md:border-0 border-gray-400 block p-2 md:p-0 md:px-5 hover:bg-green-800 rounded hover:text-white" href="#about_us">About us</a></li>
+        <li><a class="border-b min-md:border-0 border-gray-400 block p-2 md:p-0 md:px-5 hover:bg-green-800 rounded hover:text-white" href="#services">Services</a></li>
+        <li><a class="border-b min-md:border-0 border-gray-400 block p-2 md:p-0 md:px-5 hover:bg-green-800 rounded hover:text-white" href="#past_work">Past Work</a></li>
+        <li><a class="border-b min-md:border-0 border-gray-400  block p-2 md:p-0 md:px-5 hover:bg-green-800 rounded hover:text-white" href="#reviews">Reviews</a></li>
+      </ul>
+      <div class="right_button  m-3 md:m-0">
+        <a href="/#" class="block  rounded-full p-3 md:p-2 bg-green-800 text-white">Get Free Quates</a>
+      </div>
+     
+    </div>
+      <div class=" absolute right-0 top-0 p-2 md:hidden">
+         <button id="menuToggle" class="p-2 rounded-full bg-green-800 text-white">
+           <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6H20M4 12H20M4 18H20" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+         </button>
+       </div>
+
+      
+  </nav> 
+
+    <div class="hero_section p-2 flex flex-col md:flex-row md:gap-4 container mx-auto">
+          <div class="hero_left my-8">
+            <h1 class="text-[44px] text-white leading-none "> Reliable HVAC  for every season</h1>
+            <ul class="my-4">
+              <li class="flex  text-white my-2">
+                <div class="mx-2">
+                  <img src="./images/checkmark-badge-01.svg" alt="">
+                </div>
+                <div> Chertified & Experience Teaching </div>
+              </li>
+               <li class="flex  text-white my-2">
+                <div class="mx-2">
+                  <img src="./images/alarm-clock.svg" alt="">
+                </div>
+                <div> Chertified & Experience Teaching </div>
+              </li>
+               <li class="flex  text-white my-2">
+                <div class="mx-2">
+                  <img src="./images/hot-price.svg" alt="">
+                </div>
+                <div> Chertified & Experience Teaching </div>
+              </li>
+            </ul>
+            <div class="my-4">
+              <form action="#" class="p-3 bg-white rounded-md grid grid-cols-2 gap-3 text-start">
+                <input type="text" name="name" placeholder="Name" class="text-start p-3 border border-green-600 rounded">
+                <input type="text" name="phone" placeholder="Phone" class="text-start p-3 border border-green-600 rounded">
+                <select class="text-start p-3 border border-green-600 rounded">
+                  <option>
+                    Services
+                  </option>
+                  <option>Service 1</option>
+                  <option>Service 2</option>
+                  <option>Service 3</option>
+                </select>
+               <button class="text-start p-3 border border-green-600 rounded">Submit</button>
+              </form>
+            </div>
+
+            <div>
+              <h4 class="text-white text-2xl my-2">
+                Certified Installer
+              </h4>
+              <div class="my-4">
+                <ul class="flex md:flex-row md:justify-start gap-3 justify-between">
+                   <li>
+                    <img src="./images/layer102.png"/>
+                  </li> 
+                   <li>
+                    <img src="./images/Group 1.png"/>
+                  </li>
+                   <li>
+                    <img src="./images/Group 2.png"/>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="hero_right ">
+            <div class="relative w-[100%] mt-32 bg-white rounded-tl-full h-[200px]">
+             <img src="./images/warranty.png" alt="" class="absolute -top-16 -left-12 w-[200px]">
+             <img src="./images/hero model.png" alt=" " class="absolute bottom-0 "/>
+             <div class="absolute bottom-4 px-5 left-4 bg-white rounded-md p-3 border-4 border-gray-100 flex flex-col justify-center text-center">
+                <img src="./images/google.png" class="w-6 mx-auto mb-1"/>
+                <h2>4.8 (450)</h2>
+             </div>
+               <div class="absolute top-4 px-5 right-0 bg-white rounded-md p-3 border-4 border-gray-100 flex flex-col justify-center text-center">
+                <img src="./images/shield-02.png" class="w-6 mx-auto mb-1"/>
+                <h2> C20-987654</h2>
+             </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2 mt-2">
+              <div class="relative ">
+                <img src="./images/team_replacing_old_ac.jpg" alt="" class="h-[120px] w-full rounded-br-lg ">
+                <a href="#" class="absolute bottom-0 right-0 rounded-br-lg rounded-tl-lg bg-green-800 rounded-md p-2 text-white">
+                  View Details
+                </a>
+              </div>
+              <div class="relative ">
+                <img src="./images/one_replacing.jpg" alt="" class="h-[120px] w-full rounded-br-lg">
+                <a href="#" class="absolute bottom-0 right-0  bg-green-800 rounded-br-lg rounded-tl-lg p-2 text-white">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+       </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!--Reviews Section-->
+<section class="py-6">
+   <div class="container mx-auto my-2">
+     <h2 class="text-center text-3xl pt-8 font-bold">
+      Trusted By Families Like Yours.
+     </h2>
+   </div>
+   <div class="md:w-[90%] mx-auto ">
+   <div class="container mx-auto py-8 grid grid-cols-1 md:grid-cols-3 gap-3 justify-center">
+     <div class="p-6 flex flex-col items-center hover:bg-green-800 hover:text-white duration-200  text-center shadow-md  rounded-md mx-6">
+          <img src="./images/reviewer1.jpg" alt="" class="w-14 h-14 rounded-full" >
+          <h3>Moson Center</h3>
+      <p class="star-container flex space-x-1 cursor-pointer text-2xl text-yellow-400">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </p>
+
+     <p class="rating-value mt-2 text-sm text-gray-600"></p>
+         <p>“Super professional service, quick installation, and everything works perfectly. Highly recommend!”</p>
+         <p class="my-4">
+           <img src="./images/google.png" class="w-6 mx-auto mb-1"/>
+         </p>
+         <p> Reviewed by Google</p>
+        </div>
+        <div class="p-6 flex flex-col items-center hover:bg-green-800 hover:text-white duration-200  text-center shadow-md  rounded-md mx-6">
+          <img src="./images/reviewer2.jpg" alt="" class="w-14 h-14 rounded-full" >
+          <h3>Choice Anderson</h3>
+      <p class="star-container flex space-x-1 cursor-pointer text-2xl text-yellow-400">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </p>
+
+      <p class="rating-value mt-2 text-sm text-gray-600"></p>
+         <p>“Super professional service, quick installation, and everything works perfectly. Highly recommend!”</p>
+         <p class="my-4">
+           <img src="./images/google.png" class="w-6 mx-auto mb-1"/>
+         </p>
+         <p> Reviewed by Google</p>
+        </div>
+        <div class="p-6 flex flex-col items-center hover:bg-green-800 hover:text-white duration-200  text-center shadow-md  rounded-md mx-6">
+          <img src="./images/reviewer3.jpg" alt="" class="w-14 h-14 rounded-full" >
+          <h3>Skylar Bennat</h3>
+        <p class="star-container flex space-x-1 cursor-pointer text-2xl text-yellow-400">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </p>
+
+        <p class="rating-value mt-2 text-sm text-gray-600"></p>
+         <p>“Super professional service, quick installation, and everything works perfectly. Highly recommend!”</p>
+         <p class="my-4">
+           <img src="./images/google.png" class="w-6 mx-auto mb-1"/>
+         </p>
+         <p> Reviewed by Google</p>
+        </div>
+   </div>
+
+
+   </div>
+
+
+   <h2 class="text-center  pt-8 ">
+       <a href="#" class=" bottom-0 right-0  bg-green-800 rounded p-2 text-white">
+                  View Details
+      </a>
+     </h2>
+</section>
+
+
+
+<!-- Section Trusted by -->
+
+<section class="py-6">
+     <h2 class="text-center text-3xl pt-8 font-bold">
+      Your Trusted HVAC Experts
+     </h2>
+  <div class="container mx-auto py-8">
+     <div class="w-full mx-auto flex flex-col md:flex-row justify-center gap-3 text-center items-center" >
+      <div class="max-w-[250px]">
+        <img src="./images/iso.png" class="mx-auto"  alt=""/>
+        <p>ISO 9001 Certified</p>
+        <p class="text-sm text-gray-400">Quality Management for HVAC Excellence</p>
+      </div>
+      <div class="max-w-[250px]">
+        <img src="./images/image 2.png " class="mx-auto"  alt=""/>
+        <p>ISO 9001 Certified</p>
+        <p class="text-sm text-gray-400">Quality Management for HVAC Excellence</p>
+      </div>
+     </div>
+  </div>
+
+  <div class="container flex justify-center gap-12 mx-auto">
+    <div>
+      <img src="./images/Vector.png" alt="" class="h-12  mx-auto">
+      <p class="mt-2 text-sm text-center">EPA Chirtified</p>
+    </div>
+    <div>
+      <img src="./images/Logo (3).png" alt="" class="h-12  mx-auto">
+      <p class="mt-2 text-sm text-center">EPA Chirtified</p>
+    </div>
+     <div>
+      <img src="./images/Frame 46.png" alt="" class="h-12  mx-auto">
+      <p class="mt-2 text-sm text-center">EPA Chirtified</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- The benifits of choosing us -->
+<section class="py-6 bg-[#EBFFF1]">
+   <h2 class="text-center text-3xl pt-8 font-bold">
+      The Benefits of Choosing Us
+     </h2>
+
+     <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 py-6 gap-12">
+        <div class="flex flex-col items-center justify-center rounded-bl-[40px] rounded-tr-[40px] bg-white p-4 shadow-md pb-6" >
+          <img src="./images/clock-03.png" >
+          <p class="font-bold text-center mt-4">24/7 Emergency Services</p>
+          <p class="text-center">Fast and reliable emergency HVAC services available 24/7.</p>
+        </div>
+          <div class="flex flex-col items-center justify-center rounded-bl-[40px] rounded-tr-[40px] bg-white p-4 shadow-md pb-6" >
+          <img src="./images/labor.png" >
+          <p class="font-bold text- mt-4">Experienced Professionals</p>
+          <p class="text-center ">Highly trained and certified HVAC experts with years of industry experience.</p>
+        </div>
+          <div class="flex flex-col items-center justify-center rounded-bl-[40px] rounded-tr-[40px] bg-white p-4 shadow-md pb-6" >
+          <img src="./images/dollar-circle.png" >
+          <p class="font-bold text-center mt-4">Affordable Pricing</p>
+          <p class="text-center">Transparent and competitive pricing with no hidden fees.</p>
+        </div>
+     </div>
+</section>
+
+
+<section class="py-8">
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
+    <div class="flex flex-col justify-between">
+        <h2 class=" text-3xl  font-bold">
+        Past Work That Speaks for Itself
+        </h2>
+        <p class="text-gray-400">
+         Explore some of the outstanding HVAC projects we’ve proudly completed. Every image reflects our unwavering commitment to quality, reliability, and expert craftsmanship — from flawless installations to seamless maintenance. These are just a few examples of the exceptional results we deliver for homeowners like you.
+        </p>
+        <p class="py-8">
+          <a href="#" class="p-3 bg-green-800 rounded text-white ">
+            Explore Our Work
+          </a>
+        </p>
+    </div>
+    <div class="p-4 bg-green-800 rounded-lg text-white">
+      <h2 class="text-lg pt-3">
+        Efficient Home Heating Upgrade
+      </h2>
+      <p class="text-gray-300 leading-none pb-3">
+        Installed a high-efficiency furnace system, reducing energy costs and improving comfort for the homeowners.
+      </p>
+        <img src="./images/Frame 65@2x.png" class="w-full h-[200px]"/>
+
+    </div>
+
+     <div class="p-4 bg-green-800 rounded-lg text-white">
+      <h2 class="text-lg pt-3">
+        Efficient Home Heating Upgrade
+      </h2>
+      <p class="text-gray-300 leading-none pb-3">
+        Installed a high-efficiency furnace system, reducing energy costs and improving comfort for the homeowners.
+      </p>
+        <img src="./images/Frame 65.png" class="w-full h-[200px]"/>
+
+    </div>
+
+
+     <div class="p-4 bg-green-800 rounded-lg text-white">
+      <h2 class="text-lg pt-3">
+        Efficient Home Heating Upgrade
+      </h2>
+      <p class="text-gray-300 leading-none pb-3">
+        Installed a high-efficiency furnace system, reducing energy costs and improving comfort for the homeowners.
+      </p>
+        <img src="./images/one_replacing.jpg" class="w-full h-[200px]"/>
+
+    </div>
+    </div>
+
+</section>
+
+
+<!--  -->
+<section>
+  <h2 class="text-center text-3xl pt-8 font-bold ">
+     Save Big on Your Next HVAC Project
+     </h2>
+  <div class="container  grid grid-cols-3 justify-center gap-6 mx-auto mt-4">
+   <div class="col-span-3 md:col-span-2 relative min-h-[300px] rounded-[40px] overflow-hidden" style="background-image: url('./images/photo_fromUp.jpg'); background-size: cover;">
+       <div class="absolute bottom-0 left-0 p-5 bg-green-800/50 w-full h-full flex flex-col justify-end">
+         <div>
+            <a href="#" class="bg-white  rounded-md p-2 inline">
+            Hot Offer
+          </a>
+
+          <h2 class="text-xl text-white py-5">Get $500 OFF New HVAC System Installation!</h2>
+          <p class="text-xs text-white py-5">
+            Upgrade your comfort and save big! Get an instant $500 OFF when you install a brand-new, energy-efficient HVAC system — limited time only!
+          </p>
+      
+         
+       </div> 
+
+       </div>
+   </div>
+   <div class="col-span-3 md:col-span-1 rounded-[40px]" style="background-image: url('./images/Frame\ 75.png'); background-size: cover;">
+    
+   </div>
+  </div>
+</section>
+
+
+<!-- How we brigng   -->
+<section>
+ <h2 class="text-center text-3xl pt-8 font-bold ">
+   How We Bring Comfort to Your Home
+     </h2>
+
+     <div class="container mx-auto py-8 justify-center w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="flex flex-col justify-end mb-4  min-h-[300px]" style="background-image: url('./images/Subtract.png'); background-size: cover;">
+     
+ 
+        <p class="py-3 px-5">
+         <a href="#" class="bg-green-800 p-3 inline  rounded">
+            <img src="./images/calendar-03.png" class="inline"/>
+         </a>
+        </p>
+        <div class="p-2 mx-4 bg-white">
+          <h2 class="text-xl">Schedule a Consultation</h2>
+          <p class="text-xs text-gray-600">
+            Contact us to book your free consultation with our HVAC experts.
+          </p>
+        </div>
+        </div>
+           <div class="object-cover flex flex-col justify-end  min-h-[300px]" style="background-image: url('./images/Subtract@2x.png'); background-size: cover;">
+     
+ 
+        <p class="py-3 px-5">
+         <a href="#" class="bg-green-800 p-3 inline  rounded">
+            <img src="./images/calendar-03.png" class="inline"/>
+         </a>
+        </p>
+        <div class="p-2 mx-4 bg-white">
+          <h2 class="text-xl">Schedule a Consultation</h2>
+          <p class="text-xs text-gray-600">
+            Contact us to book your free consultation with our HVAC experts.
+          </p>
+        </div>
+        </div>
+
+
+           <div class="object-cover flex flex-col justify-end  min-h-[300px]" style="background-image: url('./images/Subtract.png'); background-size: cover;">
+     
+ 
+        <p class="py-3 px-5">
+         <a href="#" class="bg-green-800 p-3 inline  rounded">
+            <img src="./images/calendar-03.png" class="inline"/>
+         </a>
+        </p>
+        <div class="p-2 mx-4 bg-white">
+          <h2 class="text-xl">Schedule a Consultation</h2>
+          <p class="text-xs text-gray-600">
+            Contact us to book your free consultation with our HVAC experts.
+          </p>
+        </div>
+        </div>
+
+
+           <div class="object-cover flex flex-col justify-end  min-h-[300px]" style="background-image: url('./images/Subtract@2x.png'); background-size: cover;">
+        <p class="py-3 px-5">
+         <a href="#" class="bg-green-800 p-3 inline  rounded">
+            <img src="./images/calendar-03.png" class="inline"/>
+         </a>
+        </p>
+        <div class="p-2 mx-4 bg-white">
+          <h2 class="text-xl">Schedule a Consultation</h2>
+          <p class="text-xs text-gray-600">
+            Contact us to book your free consultation with our HVAC experts.
+          </p>
+        </div>
+        </div>
+     </div>
+</section>
+
+
+<!-- How we brigng   -->
+<section>
+ <h2 class="text-center text-3xl py-8  font-bold ">
+   Our HVAC Services
+     </h2>
+
+     <div class="container mx-auto py-12 justify-center w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+     <div >
+      <img src="./images/Frame 91.png" class="h-[150px]"/>
+      <div>
+        <h2 class="text-xl mt-2">
+          Air Conditioner Installation
+        </h2>
+        <p class="text-gray-600">
+          Stay cool all summer with fast, professional AC installations built to last.
+        </p>
+
+        <div class="py-4">
+     <a class=" p-2 text-white bg-green-800 rounded-lg">Explore Service</a>
+        </div>
+      </div>
+     </div>
+      <div >
+      <img src="./images/Frame 65.png"  class="h-[150px]"/>
+      <div>
+        <h2 class="text-xl mt-2">
+          Air Conditioner Installation
+        </h2>
+        <p class="text-gray-600">
+          Stay cool all summer with fast, professional AC installations built to last.
+        </p>
+
+        <div class="py-4">
+     <a class=" p-2 text-white bg-green-800 rounded-lg">Explore Service</a>
+        </div>
+      </div>
+     </div>
+      <div >
+      <img src="./images/Frame 65@2x.png"  class="h-[150px]"/>
+      <div>
+        <h2 class="text-xl mt-2">
+          Air Conditioner Installation
+        </h2>
+        <p class="text-gray-600">
+          Stay cool all summer with fast, professional AC installations built to last.
+        </p>
+
+        <div class="py-4">
+     <a class=" p-2 text-white bg-green-800 rounded-lg">Explore Service</a>
+        </div>
+      </div>
+     </div>
+     </div>
+</section>
+
+
+
+
+<script>
+  const toggleBtn = document.getElementById('menuToggle');
+  const menuBar = document.getElementById('menuBar');
+
+  toggleBtn.addEventListener('click', () => {
+    menuBar.classList.toggle('hidden');
+  });
+
+
+
+
+ 
+
+
+</script>
+</body>
+</html>
