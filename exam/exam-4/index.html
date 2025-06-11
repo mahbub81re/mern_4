@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meal Finder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 ">
+  
+<section class="relative bg-cover bg-center bg-no-repeat" style="background-image: url('./images/page-title.jpg');">
+<div class="p-5 bg-white">
+    <img src="./images/logo (3).png" alt="Logo" class="mx-auto mb-4 w-24">
+</div>
+ 
+
+  <div class="relative z-10 text-center text-white py-20 px-4">
+      <h1 class="text-4xl md:text-5xl font-bold">Search Your Favorite Recipe</h1>
+      <p class="text-lg mt-4">A handful of simple ingredients typify the fresh, vibrant flavors of Greek cooking</p>
+      <div class="absolute inset-0 bg-black opacity-50 -z-10"></div>
+
+   
+  </div>
+</section>
+
+  <div class="max-w-5xl mx-auto">
+  
+    <div class="mt-10 max-w-xl mx-auto mb-6">
+      <form onsubmit="searchMeal(); return false;" class="flex rounded overflow-hidden shadow-lg">
+        <input type="text" id="searchInput" placeholder="Search..." class="flex-grow px-4 py-3 text-gray-800 focus:outline-none">
+        <button type="submit" class="bg-yellow-400 px-5 flex items-center justify-center hover:bg-yellow-500 transition">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
+      </form>
+    </div>
+
+
+      <h1 class="text-3xl font-bold text-center mb-6">Latest Racipes</h1>
+
+      <div id="mealDetails" class="mt-8 p-4 bg-white rounded shadow hidden"></div>
+    <div id="mealList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-2"></div>
+  </div>
+
+  <script>
+    const mealList = document.getElementById("mealList");
+    const mealDetails = document.getElementById("mealDetails");
+
+    // Load all meals on first load
+    window.onload = () => {
+      fetchAllMeals();
+    };
+
+    async function fetchAllMeals() {
+      const res = await fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=");
+      const data = await res.json();
+      displayMeals(data.meals);
+    }
+
+    async function searchMeal() {
+      const foodName = document.getElementById("searchInput").value.trim();
+      if (!foodName) return fetchAllMeals();
+
+      const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${foodName}`);
+      const data = await res.json();
+      displayMeals(data.meals);
+    }
+
+    async function showDetails(id) {
+      const res = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
+      const data = await res.json();
+      const meal = data.meals[0];
+
+      mealDetails.innerHTML = `
+        <h2 class="text-2xl font-bold mb-2">${meal.strMeal}</h2>
+        <img src="${meal.strMealThumb}" class="w-full h-64 object-cover rounded mb-4" />
+        <p class="mb-2"><strong>Category:</strong> ${meal.strCategory}</p>
+        <p class="mb-2"><strong>Area:</strong> ${meal.strArea}</p>
+        <p class="mb-2"><strong>Instructions:</strong> ${meal.strInstructions.slice(0, 300)}...</p>
+        <a href="${meal.strYoutube}" target="_blank" class="text-blue-500 underline">📺 Watch on YouTube</a>
+      `;
+      mealDetails.classList.remove("hidden");
+      window.scrollTo({ top: mealDetails.offsetTop - 20, behavior: "smooth" });
+    }
+
+    function displayMeals(meals) {
+  mealList.innerHTML = "";
+  mealDetails.classList.add("hidden");
+
+  if (!meals) {
+    mealList.innerHTML = "<p class='text-red-500'>No meals found.</p>";
+    return;
+  }
+
+  meals.forEach(meal => {
+    const shortInstructions = meal.strInstructions
+      ? meal.strInstructions.slice(0, 60) + "..."
+      : "No instructions available.";
+
+    const mealCard = document.createElement("div");
+    mealCard.className = "bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between";
+
+    mealCard.innerHTML = `
+      <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="w-full h-48 object-cover" />
+      <div class="p-4 flex flex-col flex-grow">
+        <h3 class="text-lg font-semibold mb-2">${meal.strMeal}</h3>
+        <p class="text-gray-600 text-sm flex-grow">${shortInstructions}</p>
+      </div>
+      <div class="p-4 pt-0 flex justify-end">
+        <button onclick="showDetails('${meal.idMeal}')" class=" bg-yellow-400 text-black font-semibold py-2 px-3 rounded hover:bg-yellow-500 transition">
+          VIEW DETAILS
+        </button>
+      </div>
+    `;
+
+    mealList.appendChild(mealCard);
+  });
+}
+  </script>
+</body>
+</html>
