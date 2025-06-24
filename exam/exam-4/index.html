@@ -27,7 +27,7 @@
   
     <div class="mt-10 max-w-xl mx-auto mb-6">
       <form onsubmit="searchMeal(); return false;" class="flex rounded overflow-hidden shadow-lg">
-        <input type="text" id="searchInput" placeholder="Search..." class="flex-grow px-4 py-3 text-gray-800 focus:outline-none">
+        <input onchange="searchMeal(); return false;" type="text" id="searchInput" placeholder="Search..." class="flex-grow px-4 py-3 text-gray-800 focus:outline-none">
         <button type="submit" class="bg-yellow-400 px-5 flex items-center justify-center hover:bg-yellow-500 transition">
           <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -64,7 +64,7 @@
 
       const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${foodName}`);
       const data = await res.json();
-      displayMeals(data.meals);
+      displayMeals(data.meals , );
     }
 
     async function showDetails(id) {
@@ -92,8 +92,10 @@
     mealList.innerHTML = "<p class='text-red-500'>No meals found.</p>";
     return;
   }
+    const foodName = document.getElementById("searchInput").value.trim();
 
   meals.forEach(meal => {
+      const mealstring = foodName!=="" ? meal.strMeal.replaceAll(foodName,`<span style='color:red;'>${foodName}</span>`) : meal.strMeal;
     const shortInstructions = meal.strInstructions
       ? meal.strInstructions.slice(0, 60) + "..."
       : "No instructions available.";
@@ -104,7 +106,7 @@
     mealCard.innerHTML = `
       <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="w-full h-48 object-cover" />
       <div class="p-4 flex flex-col flex-grow">
-        <h3 class="text-lg font-semibold mb-2">${meal.strMeal}</h3>
+        <h3 class="text-lg font-semibold mb-2 ">${mealstring}</h3>
         <p class="text-gray-600 text-sm flex-grow">${shortInstructions}</p>
       </div>
       <div class="p-4 pt-0 flex justify-end">
